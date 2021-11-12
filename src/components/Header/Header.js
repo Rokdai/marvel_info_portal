@@ -1,6 +1,7 @@
 import { memo } from "react/cjs/react.development";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import H1 from "../H1/H1";
 import Menu from "../Menu/Menu";
@@ -34,6 +35,12 @@ const Header = ({ pad, display, jC }) => {
       />
     </HeaderWrapper>
   );
+};
+
+Header.propTypes = {
+  pad: PropTypes.string,
+  display: PropTypes.string,
+  jC: PropTypes.string,
 };
 
 export default memo(Header);

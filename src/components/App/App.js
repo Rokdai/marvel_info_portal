@@ -10,7 +10,11 @@ export const App = () => {
     <Router>
       <Header pad={"50px 0 0 0"} display={"flex"} jC={"space-between"} />
       <Routes>
-        <Route exact path="/" element={<CharacterPage pad={"50px 0"} />} />
+        <Route
+          exact
+          path="/"
+          element={<CharacterPage pad={"50px 0"} pos={"relative"} />}
+        />
       </Routes>
       <Routes>
         <Route exact path="/comics" element={<ComicsPage />} />

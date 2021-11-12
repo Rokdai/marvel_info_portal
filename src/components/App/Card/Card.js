@@ -2,52 +2,41 @@ import { memo } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Wrapper = ({
+const Card = ({
   width,
   height,
   display,
   fD,
   jC,
-  fWr,
   aI,
-  gap,
-  pad,
-  bC,
-  pos,
+  bg_color,
   bS,
   children,
 }) => {
-  const Wr = styled.div`
+  const CardBox = styled.div`
     width: ${width};
     height: ${height};
     display: ${display};
     flex-direction: ${fD};
     justify-content: ${jC};
-    flex-wrap: ${fWr};
     align-items: ${aI};
-    gap: ${gap};
-    padding: ${pad};
-    background-color: ${bC};
-    position: ${pos};
+    background-color: ${bg_color};
     box-shadow: ${bS};
+    cursor: pointer;
   `;
 
-  return <Wr>{children}</Wr>;
+  return <CardBox>{children}</CardBox>;
 };
 
-Wrapper.propTypes = {
+Card.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
   display: PropTypes.string,
   fD: PropTypes.string,
   jC: PropTypes.string,
-  fWr: PropTypes.string,
   aI: PropTypes.string,
-  gap: PropTypes.string,
-  pad: PropTypes.string,
-  bC: PropTypes.string,
-  pos: PropTypes.string,
+  bg_color: PropTypes.string,
   bS: PropTypes.string,
 };
 
-export default memo(Wrapper);
+export default memo(Card);
